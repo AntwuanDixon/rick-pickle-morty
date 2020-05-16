@@ -1,0 +1,12 @@
+button {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#container {
+    display: flexbox;
+    width: 80%;
+    height: 50%;
+    border-color: azure;
+}
