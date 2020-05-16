@@ -1,12 +1,39 @@
+* {
+    justify-content: center;
+    justify-items: center;
+}
+
 button {
     width: 120px;
     height: 40px;
     border-radius: 10px;
 }
 
+section {
+    border: black;
+    border-radius: 10px;
+}
+
 #container {
-    display: flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     width: 80%;
-    height: 50%;
-    border-color: azure;
+    height: max-content;
+}
+
+#container div {
+    background-color: bisque;
+    width: 600px;
+    height: 400px;
+
+    
+}
+
+#container img {
+    border-radius: 10px;
+    border-color: black;
+    border-width: 10px;
+    border-color: blue;
+    padding-left: 30px;
 }
