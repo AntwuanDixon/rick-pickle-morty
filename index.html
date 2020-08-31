@@ -6,32 +6,41 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-      <section>
-      <h1>Rick, Pickle, Morty</h1>
-      <div id='container'>
-          Battle Arena
-          <div id="player-img-container">
-              <img id="player-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmHqjPvCAUMkWmvx3Bs0LhTTyu_Ro8ZoRw_YzMK5iuGFRn0zKM&usqp=CAU">
+      <section id="game-area">
+        <h1>Rick, Pickle, Morty</h1>
+        <div class="flex-container">
+          <div class="vert-flex-box">
+            <h2>You</h2>
+            <p><span id="your-score">0</span></p>
           </div>
-          <div id="computer-img-comtainer">
-               <img id="computer-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmHqjPvCAUMkWmvx3Bs0LhTTyu_Ro8ZoRw_YzMK5iuGFRn0zKM&usqp=CAU">
+          <div class="vert-flex-box">
+            <h2>Computer</h2>
+            <p><span id="computer-score">0</span></p>
           </div>
+        </div>
+        <div id='container'>
+            <div class="flex-container">
+              <div id="player-img-container">
+                  <img id="player-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmHqjPvCAUMkWmvx3Bs0LhTTyu_Ro8ZoRw_YzMK5iuGFRn0zKM&usqp=CAU">
+              </div>
+              <h2 id="result"> </h2>
+              <div id="computer-img-comtainer">
+                  <img id="computer-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmHqjPvCAUMkWmvx3Bs0LhTTyu_Ro8ZoRw_YzMK5iuGFRn0zKM&usqp=CAU">
+              </div>
+          </div>
+        </div>
+        <div id="result-box">
+          <p><span><span id="your-throw"></span><span id="who-beats-who"></span><span id="computer-throw"></span></span></p>
+        </div>
+        <div class="flex-container">
+        <button id='button-rick'>Rick</button>
+        <button id='button-pickle'>Pickle</button>
+        <button id='button-morty'>Morty</button>
       </div>
+      <div class="flex-container">
+        <button id='button-reset'>Reset</button>
+        </div>
       </section>
-      <button id='button-rick'>Rick</button>
-      <button id='button-pickle'>Pickle</button>
-      <button id='button-morty'>Morty</button>
-      <h2 id="result"></h2>
-      <div>
-      <h2>You: </h2>
-      <span id="your-throw"></span>
-      <span id="your-score">0</span>
-      </div>
-      <div>
-      <h2>Computer: </h2>
-      <span id="computer-throw"></span>
-      <span id="computer-score">0</span>
-      </div>
       <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
