@@ -48,7 +48,6 @@ let computerSelect = function () {
 
 // compares the user and computer choice, then writes who beat who and returns the score
 function playRound(userChoice, computerChoice) { 
-    checkGameOver(userChoice);
     console.log(computerChoice);
     yourThrow.innerHTML = userChoice;
     computerThrow.innerHTML = computerChoice;
@@ -76,6 +75,7 @@ function addComputerPoint() {
     whoBeatsWho.innerHTML = " is beaten by ";
     computerScore += 1;
     printResult();
+    checkGameOver();
     return computerScore;
 }
 
@@ -83,12 +83,13 @@ function addUserPoint() {
     whoBeatsWho.innerHTML = " beats ";
     yourScore += 1;
     printResult();
+    checkGameOver();
     return yourScore;
     
 }
 
 //checks if either player has won 5 rounds, then writes win or lose
-function checkGameOver(userChoice) {
+function checkGameOver() {
     if (yourScore >= 5) {
         document.getElementById("result").innerHTML = "You Win!";
         document.getElementById("your-score").innerHTML = yourScore;
