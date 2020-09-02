@@ -74,12 +74,17 @@ if (userChoice === "rick" && computerChoice === "pickle") {
 
 function addComputerPoint() {
     whoBeatsWho.innerHTML = " is beaten by ";
-    return computerScore = computerScore + 1;
+    computerScore += 1;
+    printResult();
+    return computerScore;
 }
 
 function addUserPoint() {
     whoBeatsWho.innerHTML = " beats ";
-    return yourScore = yourScore + 1;
+    yourScore += 1;
+    printResult();
+    return yourScore;
+    
 }
 
 //checks if either player has won 5 rounds, then writes win or lose
@@ -90,13 +95,11 @@ function checkGameOver(userChoice) {
     } else if (computerScore >= 5) {
         document.getElementById("result").innerHTML = "You Lose";
         document.getElementById("computer-score").innerHTML = computerScore;
-    } else {
-    printResult(userChoice);
     }
 };
 
 //prints the player scores
-function printResult(userChoice) {
+function printResult() {
         document.getElementById("your-score").innerHTML = yourScore;
         document.getElementById("computer-score").innerHTML = computerScore;
 };
